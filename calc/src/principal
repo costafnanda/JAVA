@@ -11,9 +11,9 @@ public class Principal {
 		Calculadora calculadora = new Calculadora();
 		Scanner leia = new Scanner(System.in);
 		
-		System.out.println("Informe o 1� n�mero: ");
+		System.out.println("Informe o 1º número: ");
 		calculadora.x = leia.nextDouble();
-		System.out.println("Informe o 2� n�mero: ");
+		System.out.println("Informe o 2º número: ");
 		calculadora.y = leia.nextDouble();
 		
 		//limpeza de buffer
@@ -21,9 +21,9 @@ public class Principal {
 		
 		System.out.println("Informe o operador: ");
 		System.out.println("+ - Soma");
-		System.out.println("- = Subtra��o");
-		System.out.println("* = Multiplica��o");
-		System.out.println("/ = Divis�o");
+		System.out.println("- = Subtração");
+		System.out.println("* = Multiplicação");
+		System.out.println("/ = Divisão");
 		calculadora.operador = leia.nextLine();
 		
 		//escolha.caso
@@ -41,7 +41,7 @@ public class Principal {
 				System.out.println("Resultado: " + calculadora.dividir());
 				break;
 			default:
-				System.out.println("Op��o Inv�lida.");
+				System.out.println("Opção Inválida.");
 				break;
 			
 			
