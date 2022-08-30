@@ -1,0 +1,34 @@
+package br.com.calculadora;
+
+public class Calculadora {
+	//atributos
+	public double x;
+	public double y;
+	public double result;
+	public String operador;
+	
+	//metodos
+	public double somar() {
+		this.result = this.x + this.y;
+		return this.result;
+			
+	}
+	
+	public double subtrair() {
+		this.result = this.x - this.y;
+		return this.result;
+	}
+	
+	public double multiplicar() {
+		this.result = this.x * this.y;
+		return this.result;
+		
+	}
+	
+	public double dividir() {
+		this.result = this.x / this.y;
+		return this.result;
+				
+	}
+
+}
