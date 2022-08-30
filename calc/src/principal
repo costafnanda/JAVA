@@ -1,0 +1,54 @@
+package br.com.calculadora;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//instancia os objetos
+		Calculadora calculadora = new Calculadora();
+		Scanner leia = new Scanner(System.in);
+		
+		System.out.println("Informe o 1� n�mero: ");
+		calculadora.x = leia.nextDouble();
+		System.out.println("Informe o 2� n�mero: ");
+		calculadora.y = leia.nextDouble();
+		
+		//limpeza de buffer
+		leia.nextLine();
+		
+		System.out.println("Informe o operador: ");
+		System.out.println("+ - Soma");
+		System.out.println("- = Subtra��o");
+		System.out.println("* = Multiplica��o");
+		System.out.println("/ = Divis�o");
+		calculadora.operador = leia.nextLine();
+		
+		//escolha.caso
+		switch (calculadora.operador) {
+			case "+":
+				System.out.println("Resultado: " + calculadora.somar());
+				break;
+			case "-":
+				System.out.println("Resultado: " + calculadora.subtrair());
+				break;
+			case "*":
+				System.out.println("Resultado: " + calculadora.multiplicar());
+				break;
+			case "/":
+				System.out.println("Resultado: " + calculadora.dividir());
+				break;
+			default:
+				System.out.println("Op��o Inv�lida.");
+				break;
+			
+			
+		}
+		
+		//encerra objeto leia
+		leia.close();
+	}
+
+}
