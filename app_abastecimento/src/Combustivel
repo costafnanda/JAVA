@@ -1,0 +1,23 @@
+package br.com.abastecimento;
+
+public final class Combustivel {
+
+	//atributos
+	private double gasolina;
+	private double etanol;
+	
+	//metodos get e set
+	public double getGasolina() {
+		return gasolina;
+	}
+	public void setGasolina(double gasolina) {
+		this.gasolina = gasolina;
+	}
+	public double getEtanol() {
+		return etanol;
+	}
+	public void setEtanol(double etanol) {
+		this.etanol = etanol;
+	}
+	
+}
