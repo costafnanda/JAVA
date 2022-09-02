@@ -1,0 +1,60 @@
+package br.com.abastecimento;
+
+import javax.swing.JOptionPane;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//declaração de variáves
+		String gasolina;
+		String etanol;
+		double valorGasolina;
+		double valorEtanol;
+		String resposta = null;
+	
+	//instancia objeto da classe Combustivel
+	Combustivel cliente = new Combustivel();
+	
+	
+	
+	do {
+		
+	//input
+	gasolina = JOptionPane.showInputDialog("Informe o valor da Gasolina:");
+	etanol = JOptionPane.showInputDialog("Informe o valor do Etanol:");
+	
+	//substituiindo virgula por ponto
+	gasolina = gasolina.replace(",",".");
+	etanol = etanol.replace(",",".");
+	
+	//conversão
+	valorGasolina = Double.parseDouble(gasolina);
+    valorEtanol = Double.parseDouble(etanol);			
+	cliente.setGasolina(valorGasolina);
+	cliente.setEtanol(valorEtanol);
+	
+	
+	
+		double calculo = (valorEtanol / valorGasolina);
+		
+		if (calculo >=0.70) {
+			JOptionPane.showMessageDialog(null, "Melhor abastecer com Gasolina!");
+		} 
+		else if (calculo < 0.70) {
+			JOptionPane.showMessageDialog(null, "Melhor abastecer com Etanol!");}
+		
+		JOptionPane.showConfirmDialog(null, "Deseja sair?","Confirma",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+		int resposta1 = JOptionPane.showConfirmDialog(null, "Deseja sair?","Confirma",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+		if (resposta1 == JOptionPane.NO_OPTION) {
+			JOptionPane.showMessageDialog(null, "Continuar operação");}
+		else if(resposta1 == JOptionPane.YES_OPTION) {
+			JOptionPane.showMessageDialog(null,"Operação Encerrada!");
+						}
+				
+						
+	} while (resposta != "OK");
+	
+}
+}
